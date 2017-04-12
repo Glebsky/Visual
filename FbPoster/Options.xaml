@@ -1,0 +1,22 @@
+﻿<Window x:Class="FbPoster.Options"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FbPoster"
+        mc:Ignorable="d"
+        Title="Options" Height="175" Width="255">
+    <Grid RenderTransformOrigin="0.5,0.691" Margin="0,0,0,1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="103*"/>
+            <RowDefinition Height="33*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="label" Content="Количество минут для таймера" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="181" Height="26"/>
+        <TextBox x:Name="SecondsBox" HorizontalAlignment="Left" Height="23" Margin="10,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="49"/>
+        <CheckBox x:Name="IsTimerWorkCHK" Content="Включить таймер" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" Height="21" Width="227" IsChecked="True"/>
+        <CheckBox x:Name="OverWindowBox" Content="Поверх всех окон" HorizontalAlignment="Left" Margin="10,85,0,0" VerticalAlignment="Top" Height="21" Width="227" Grid.RowSpan="2"/>
+        <Button x:Name="button" Content="Отмена" HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" IsCancel="True" Height="25"/>
+        <Button x:Name="AceptBtn" Content="Применить" HorizontalAlignment="Right" Margin="0,5,10,0" Grid.Row="1" Width="75" IsDefault="True" Click="button_Copy_Click" Height="25" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

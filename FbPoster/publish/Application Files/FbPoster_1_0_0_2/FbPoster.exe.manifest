@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="FbPoster.exe" version="1.0.0.2" publicKeyToken="a285214b433641ec" language="ru-RU" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="fbposter.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="FbPoster" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="FbPoster.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+             If you want to change the Windows User Account Control level replace the 
+             requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Specifying requestedExecutionLevel element will disable file and registry virtualization. 
+            Remove this element if your application requires this virtualization for backwards
+            compatibility.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FbPoster.exe" size="400352">
+      <assemblyIdentity name="FbPoster" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>3MVoYGHNus8agq5vA30sEXos9u+APgnHWv5oRg6acFk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Google.Apis.dll" size="68608">
+      <assemblyIdentity name="Google.Apis" version="1.24.1.0" publicKeyToken="4B01FA6E34DB77AB" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>bxzvIrXmgrdGBqkQL6Or4wlYiMhIv71eDbpWAQbwKu4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Google.Apis.Auth.dll" size="57344">
+      <assemblyIdentity name="Google.Apis.Auth" version="1.24.1.0" publicKeyToken="4B01FA6E34DB77AB" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>FqZjgmulJd2KUr5yBqepkj54VqzSHfcS9VopalqrRro=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Google.Apis.Auth.PlatformServices.dll" size="46080">
+      <assemblyIdentity name="Google.Apis.Auth.PlatformServices" version="1.24.1.0" publicKeyToken="4B01FA6E34DB77AB" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>AfynVWQQBUWOaRZ/fAs+vdQrCBbfx4Hp7bNOZ9Tk34M=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Google.Apis.Core.dll" size="56832">
+      <assemblyIdentity name="Google.Apis.Core" version="1.24.1.0" publicKeyToken="4B01FA6E34DB77AB" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>8CF1A3aEVMUZUejTf6OLJFjRcqzw4GSoh8AFBpta+EQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Google.Apis.PlatformServices.dll" size="6656">
+      <assemblyIdentity name="Google.Apis.PlatformServices" version="1.24.1.0" publicKeyToken="4B01FA6E34DB77AB" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>0roveYLitzUs1sCTa6uq+AE4wNSiP4hWGA7NWlHd3jI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Google.Apis.Urlshortener.v1.dll" size="15872">
+      <assemblyIdentity name="Google.Apis.Urlshortener.v1" version="1.24.1.138" publicKeyToken="4B01FA6E34DB77AB" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>cenSOVSoLFQu6bo8H5318PJu5grzM4tcEHYi823zoeI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="520192">
+      <assemblyIdentity name="Newtonsoft.Json" version="7.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>nsosXtGHteExnDWaq/g4KZITHv4YVLiZwjqT/iJ0luM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Zlib.Portable.dll" size="81920">
+      <assemblyIdentity name="Zlib.Portable" version="1.11.0.0" publicKeyToken="431CBA815F6A8B5B" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>EhdRwdjYy8UnDApgbbyl1xTULhirPmtXf7uNKkpVacU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="FbPoster.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>6N7MliNbVJSIAIPrecIshMbZ7zEoKLr5SQvud4LDUOw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="fbposter.ico" size="113946">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>05kPJgMUgzSFlb31NHltAymOxi0WcVDgKoFPV4h5/tE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- A list of the Windows versions that this application has been tested on and is
+           is designed to work with. Uncomment the appropriate elements and Windows will 
+           automatically selected the most compatible environment. -->
+      <!-- Windows Vista -->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}" />-->
+      <!-- Windows 7 -->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}" />-->
+      <!-- Windows 8 -->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}" />-->
+      <!-- Windows 8.1 -->
+      <!--<supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}" />-->
+      <!-- Windows 10 -->
+      <!--<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=DESKTOP-P615UN9\Admin" issuerKeyHash="c71a26b905d701f771c60ab5c3586bcc26a042aa" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>sh8mYHrLt9eTG+ZSZsfBJcTwm0Dpk3uKcfV/b94uCPo=</DigestValue></Reference></SignedInfo><SignatureValue>M1xMNi8ZIIwtzGbjKfHN2PdcxDyaE68+BzLqT7CI6dI/N+1BYh0M+QncYJTvHRQVu4CCFQIIgosyB4nb/0KK9AOZwnyeBZ2cAldWgvI2TWeMNWdyc3YQ3FaHaqoh4lxz11Pj3Sl3y1jrceRA/dSNl3KfFR7rmr6EujqNHa07ESY=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>ky4pNb2WObvNctjM6v0cs2wFkcgqYm92mqFIe8jNy4U+pyGbkHcKXYY1wokXVF/NztGZkTFo4YWIZjHoyXr1ViL2hQ+/6yn8o07dHi245pbI8QS/docfqzq0UluCWbbS84RY2jiUhb6gb0qNJoRDG4bNHVu/8TOy/yIW+3YfHgM=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="fa082ede6f7ff5718a7b93e9409bf0c425c1c76652e61b93d7b7cb7a60261fb2" Description="" Url=""><as:assemblyIdentity name="FbPoster.exe" version="1.0.0.2" publicKeyToken="a285214b433641ec" language="ru-RU" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-P615UN9\Admin</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>mVKnyJWiSzHPigxom/UOONeZkJGr1rgQ8PH16Qb1wLI=</DigestValue></Reference></SignedInfo><SignatureValue>DYCT7brNeni2OtDGw4AtU2nW1waNKSMlpvir2bAgv7/sXODhD9+6P1424Rr/iaqEf5fpXbyn543XDXYNvPkHVBzcEVYJqBCgDfm4Faormi9cAHUhTerhPFkLuslVVuNV8+nQ5WySJ+1wAxUxeVoDHxcreMrQG9Iq+nUCtOW0zaU=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>ky4pNb2WObvNctjM6v0cs2wFkcgqYm92mqFIe8jNy4U+pyGbkHcKXYY1wokXVF/NztGZkTFo4YWIZjHoyXr1ViL2hQ+/6yn8o07dHi245pbI8QS/docfqzq0UluCWbbS84RY2jiUhb6gb0qNJoRDG4bNHVu/8TOy/yIW+3YfHgM=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB7TCCAVagAwIBAgIQU4sO8IWxNqtEZ7hgoizzjTANBgkqhkiG9w0BAQsFADA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtAFAANgAxADUAVQBOADkAXABBAGQAbQBpAG4wHhcNMTcwNDA3MTAyNjE5WhcNMTgwNDA3MTYyNjE5WjA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtAFAANgAxADUAVQBOADkAXABBAGQAbQBpAG4wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAJMuKTW9ljm7zXLYzOr9HLNsBZHIKmJvdpqhSHvIzcuFPqchm5B3Cl2GNcKJF1Rfzc7RmZExaOGFiGYx6Ml69VYi9oUPv+sp/KNO3R4tuOaWyPEEv3aHH6s6tFJbglm20vOEWNo4lIW+oG9KjSaEQxuGzR1bv/Ezsv8iFvt2Hx4DAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAe7ewmI1zANf2B1Qyjv7wsyrGDztdJvIAEPMgErLd2ltvwpaud1ymHA1c6+8DHFRdkL+VGpjimoEaGLPWpUft4SiN97n9N6v8br5izSpnZC3DB84GrUQGLYz1ZZZ/h2rIXT1bLX32psf6hFsbu8PACNa8tRVGWD0ib/3JVbTMLS8=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

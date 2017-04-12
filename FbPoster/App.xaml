@@ -1,0 +1,15 @@
+﻿<Application x:Class="FbPoster.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:FbPoster"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style x:Key="Triggers" TargetType="Button">
+            <Style.Triggers>
+                <Trigger Property="IsPressed" Value="true">
+                    <Setter Property = "Background" Value="Green"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,61 @@
+﻿<Window x:Class="FbPoster.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FbPoster"
+        mc:Ignorable="d"
+        Title="FB Poster" Height="281" Width="395" Background="#FFE9EBEE" ResizeMode="CanMinimize" Icon="fbposter.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="251*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="208*"/>
+            <ColumnDefinition Width="181*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Fill="#FF3B5998" Height="40" Stroke="#FFD7D8DB" VerticalAlignment="Top" Grid.ColumnSpan="2" StrokeMiterLimit="13" StrokeThickness="0">
+            <Rectangle.Effect>
+                <DropShadowEffect BlurRadius="10" Direction="278" Opacity="0.365" ShadowDepth="1"/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="30" Margin="20,5,0,0" VerticalAlignment="Top" Width="30" Source="Resource/fbLogo.png" Stretch="Fill"/>
+        <Label x:Name="label" Content="FB POSTER" HorizontalAlignment="Left" Margin="53,3,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" FontWeight="Bold" FontFamily="Verdana" Height="32" Width="122"/>
+        <Rectangle x:Name="PostBack" Fill="White" HorizontalAlignment="Right" Margin="0,51,8,6" Stroke="#FFD7D8DB" StrokeThickness="0" StrokeMiterLimit="13" Width="190" RadiusX="5" RadiusY="5">
+            <Rectangle.Effect>
+                <DropShadowEffect BlurRadius="6" Direction="307" Opacity="0.3" ShadowDepth="1"/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <Rectangle x:Name="StatBack" Fill="White" Margin="0,51,0,73" Stroke="#FFD7D8DB" StrokeThickness="0" StrokeMiterLimit="13" RadiusX="5" RadiusY="5" HorizontalAlignment="Center" Width="161" Grid.Column="1">
+            <Rectangle.Effect>
+                <DropShadowEffect BlurRadius="6" Direction="307" Opacity="0.3" ShadowDepth="1"/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <Rectangle x:Name="TimerBack" Fill="White" HorizontalAlignment="Center" Height="61" Margin="0,0,0,6" Stroke="#FFD7D8DB" StrokeThickness="0" StrokeMiterLimit="13" VerticalAlignment="Bottom" Width="161" RadiusX="5" RadiusY="5" Grid.Column="1">
+            <Rectangle.Effect>
+                <DropShadowEffect BlurRadius="6" Direction="307" Opacity="0.3" ShadowDepth="1"/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <Label x:Name="label1" Content="Посты" HorizontalAlignment="Left" Margin="15,49,0,0" VerticalAlignment="Top" Foreground="#FF162643" FontFamily="Segoe UI Historic" FontSize="14" Height="29" Width="50"/>
+        <Label x:Name="label1_Copy" Content="Статистика" HorizontalAlignment="Left" Margin="15,49,0,0" VerticalAlignment="Top" Foreground="#FF162643" FontFamily="Segoe UI Historic" FontSize="14" Grid.Column="1" Height="29" Width="80"/>
+        <Label x:Name="label1_Copy2" Content="Таймер" HorizontalAlignment="Left" Margin="15,0,0,41" VerticalAlignment="Bottom" Foreground="#FF162643" FontFamily="Segoe UI Historic" FontSize="14" Grid.Column="1" RenderTransformOrigin="0.479,0.319" Height="29" Width="58"/>
+        <Button x:Name="CopyLink" Content="Скопировать ссылку" HorizontalAlignment="Center" Margin="0,58,0,0" VerticalAlignment="Center" Width="146" Height="30" Background="#FF4267B2" Foreground="White" MouseMove="button_Copy3_MouseMove" Grid.Column="1" Click="CopyToClip" FontWeight="Bold"/>
+        <Label x:Name="daylabel" Content="День" Margin="20,0,0,20" Foreground="#FF162643" FontFamily="Segoe UI Historic" Grid.Column="1" FontSize="10" Width="51" Height="23" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label x:Name="LabelLink1_Copy1" Content="Неделя" HorizontalAlignment="Left" Margin="65,0,0,20" VerticalAlignment="Center" Foreground="#FF162643" FontFamily="Segoe UI Historic" Grid.Column="1" FontSize="10" Width="51" Height="23"/>
+        <Label x:Name="LabelLink1_Copy2" Content="Месяц" HorizontalAlignment="Left" Margin="118,0,0,20" VerticalAlignment="Center" Foreground="#FF162643" FontFamily="Segoe UI Historic" Grid.Column="1" FontSize="10" Width="51" Height="23"/>
+        <Label x:Name="StatDay" Content="День" HorizontalAlignment="Left" Margin="20,5,0,0" VerticalAlignment="Center" Foreground="#FF162643" FontFamily="Segoe UI Historic" Grid.Column="1" Width="50" FontWeight="Bold" FontSize="14" Height="30"/>
+        <Label x:Name="StatWeek" Content="Неделя" Margin="66,114,0,108" VerticalAlignment="Center" Foreground="#FF162643" FontFamily="Segoe UI Historic" Grid.Column="1" FontWeight="Bold" FontSize="14" Height="30" HorizontalAlignment="Left" Width="50"/>
+        <Label x:Name="StatMonth" Content="Месяц" HorizontalAlignment="Left" Margin="117,5,0,0" VerticalAlignment="Center" Foreground="#FF162643" FontFamily="Segoe UI Historic" Grid.Column="1" Width="50" FontWeight="Bold" FontSize="14" Height="30"/>
+        <ComboBox x:Name="LinkBox" Grid.Column="1" Margin="0,0,0,65" Width="146" SelectionChanged="StatUpdate" VerticalAlignment="Center" HorizontalAlignment="Center" MinHeight="30" VerticalContentAlignment="Center" MaxHeight="30"/>
+        <StackPanel x:Name="stack" HorizontalAlignment="Center" Margin="0,73,0,0" Width="170" VerticalAlignment="Top" Height="166">
+            <ComboBox x:Name="PostBox" Height="30" Margin="0,0,0,5" SelectionChanged="comboBox_SelectionChanged" BorderThickness="1" SelectedIndex="0" BorderBrush="#FF4586E4" Background="#FF8EB9E4" FontSize="16" HorizontalAlignment="Center" Width="170" VerticalAlignment="Top"/>
+            <TextBox x:Name="PostMessage" HorizontalAlignment="Center" Height="86" Margin="0,0,0,2" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" BorderBrush="#FF717FA6" BorderThickness="1" FontSize="10"/>
+            <Button x:Name="PostButton4" Content="СКОПИРОВАТЬ ПОСТ" Height="35" Background="#FF4267B2" Foreground="White" FontSize="9" Margin="0" Click="CopyPostToClip" HorizontalAlignment="Center" Width="170" VerticalAlignment="Top" FontWeight="Bold"/>
+        </StackPanel>
+        <Label x:Name="TimerLable" Content="10 : 00" HorizontalAlignment="Center" Margin="0,0,0,5" VerticalAlignment="Bottom" Foreground="#FFE42A2A" FontFamily="Segoe UI Black" FontSize="30" Grid.Column="1" RenderTransformOrigin="0.495,0.48" FontWeight="Bold" Height="50" Width="107"/>
+        <Image x:Name="TimerStop" Grid.Column="1" HorizontalAlignment="Right" Height="26" Margin="0,7,67,0" VerticalAlignment="Top" Width="26" Source="Resource/stopTime.png" Cursor="Hand" MouseDown="StopTimer" SnapsToDevicePixels="True" ClipToBounds="True" Stretch="Fill" />
+        <Image x:Name="Preferences" Grid.Column="1" HorizontalAlignment="Right" Margin="0,7,30,0" Width="26" Source="Resource/preferences.png" Cursor="Hand" MouseDown="OptionsDialog" SnapsToDevicePixels="True" ClipToBounds="True" VerticalAlignment="Top" Stretch="Fill" Height="26" />
+        <Image x:Name="MiniBtn" Grid.Column="1" HorizontalAlignment="Right" Height="26" Margin="0,7,104,0" VerticalAlignment="Top" Width="26" Source="Resource/minimize.png" Cursor="Hand" MouseDown="ChangeState" SnapsToDevicePixels="True" ClipToBounds="True" Stretch="Fill" />
+
+    </Grid>
+</Window>
