@@ -30,11 +30,6 @@ namespace FB_Poster_Admin
                 LinkBox.Items.Add(links[i]);
         }
 
-        private void PostBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void DeletePost_Click(object sender, EventArgs e)
         {
             
@@ -106,7 +101,7 @@ namespace FB_Poster_Admin
             myftp.CompleteDPath = "ftp://forganicplant@organicplant.ucoz.org/FbPoster/Posts/";
             myftp.UploadFile("Posts.txt");
 
-           
+            File.Delete("links.txt");
             File.Delete("Posts.txt");
         }
 
@@ -118,6 +113,79 @@ namespace FB_Poster_Admin
             Post tempPost = new Post(pf.name, pf.desc);
             posts.Add(tempPost);
             PostBox.Items.Add(tempPost.name);
+            }
+        }
+
+        private void EditLink(object sender, EventArgs e)
+        {
+            int index = LinkBox.SelectedIndex;
+            if(index != -1) { 
+
+            string str = LinkBox.SelectedItem.ToString();           
+            int linkId = -1;
+            for (int i = 0; i < links.Length; i++)
+            {
+                if(str == links[i])
+                {
+                    linkId = i;
+                }
+            }
+            LinkAdd editForm = new LinkAdd(str);
+            editForm.ShowDialog();
+            if(editForm.DialogResult == DialogResult.OK && linkId != -1)
+            {
+                LinkBox.Items.RemoveAt(index);
+                LinkBox.Items.Insert(index, editForm.url);
+                links[linkId] = editForm.url;
+                
+            }
+            }
+        }
+
+        private void EditPost(object sender, EventArgs e)
+        {
+            int index = PostBox.SelectedIndex;
+            if(index != -1) { 
+            string str = PostBox.SelectedItem.ToString();
+            int linkId = -1;
+            for (int i = 0; i < posts.Count; i++)
+            {
+                if (str == posts[i].name)
+                {
+                    linkId = i;
+                }
+            }
+            PostForm editForm = new PostForm(str,posts[linkId].content);
+            editForm.ShowDialog();
+            if (editForm.DialogResult == DialogResult.OK && linkId != -1)
+            {
+                PostBox.Items.RemoveAt(index);
+                    PostBox.Items.Insert(index, editForm.name);
+                posts[index].content = editForm.desc;
+                posts[index].name = editForm.name;
+
+            }
+            }
+        }
+
+        private void DownPost(object sender, EventArgs e)
+        {
+            ListBox tmpList;
+            if (sender.Equals(PostDownBtn))
+                tmpList = PostBox;
+            else
+                tmpList = LinkBox;
+
+            if(tmpList.SelectedIndex != -1 && tmpList.SelectedIndex != tmpList.Items.Count-1)
+            {
+                int select = tmpList.SelectedIndex;
+                string selectstr = tmpList.SelectedItem.ToString();
+                string newstr = tmpList.Items[select+1].ToString();
+                tmpList.Items.RemoveAt(select);
+                tmpList.Items.Insert(select, newstr);
+                tmpList.Items.RemoveAt(select + 1);
+                tmpList.Items.Insert(select + 1, selectstr);
+                tmpList.SelectedIndex = select + 1;
             }
         }
     }

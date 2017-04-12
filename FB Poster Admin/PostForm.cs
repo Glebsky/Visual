@@ -19,6 +19,15 @@ namespace FB_Poster_Admin
             InitializeComponent();
         }
 
+        public PostForm(string name, string desc)
+        {
+            InitializeComponent();
+            this.name = name;
+            this.desc = desc;
+            PostName.Text = name;
+            PostDes.Text = desc;
+        }
+
         private void ApplyBtn_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(PostName.Text) || !string.IsNullOrEmpty(PostDes.Text))

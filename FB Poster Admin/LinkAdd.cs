@@ -18,6 +18,13 @@ namespace FB_Poster_Admin
             InitializeComponent();
         }
 
+        public LinkAdd(string link)
+        {
+            InitializeComponent();
+            PostName.Text = link;
+            url = link;
+        }
+
         private void ApplyBtn_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(PostName.Text))

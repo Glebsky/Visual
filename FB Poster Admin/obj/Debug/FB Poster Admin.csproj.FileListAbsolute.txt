@@ -30,3 +30,11 @@ C:\Users\Gleb\Desktop\FB Poster Admin\obj\Debug\FB_Poster_Admin.LinkAdd.resource
 D:\GitHub Repository\Visual\FB Poster Admin\bin\Debug\FB Poster Admin.exe.config
 D:\GitHub Repository\Visual\FB Poster Admin\obj\Debug\FB Poster Admin.exe
 D:\GitHub Repository\Visual\FB Poster Admin\obj\Debug\FB Poster Admin.pdb
+D:\GitHub Repository\Visual\FB Poster Admin\bin\Debug\FB Poster Admin.exe
+D:\GitHub Repository\Visual\FB Poster Admin\bin\Debug\FB Poster Admin.pdb
+D:\GitHub Repository\Visual\FB Poster Admin\obj\Debug\FB Poster Admin.csprojResolveAssemblyReference.cache
+D:\GitHub Repository\Visual\FB Poster Admin\obj\Debug\FB_Poster_Admin.Form1.resources
+D:\GitHub Repository\Visual\FB Poster Admin\obj\Debug\FB_Poster_Admin.LinkAdd.resources
+D:\GitHub Repository\Visual\FB Poster Admin\obj\Debug\FB_Poster_Admin.PostForm.resources
+D:\GitHub Repository\Visual\FB Poster Admin\obj\Debug\FB_Poster_Admin.Properties.Resources.resources
+D:\GitHub Repository\Visual\FB Poster Admin\obj\Debug\FB Poster Admin.csproj.GenerateResource.Cache
