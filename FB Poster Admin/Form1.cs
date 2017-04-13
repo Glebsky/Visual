@@ -14,7 +14,7 @@ namespace FB_Poster_Admin
     public partial class Form1 : Form
     {
         List<Post> posts;
-        string[] links;
+        List<Post> links;
         Ftp myftp;
         public Form1()
         {
@@ -23,17 +23,17 @@ namespace FB_Poster_Admin
             InitializeComponent();
 
             //Add Posts
-            for(int i =0;i<posts.Count;i++)
-            PostBox.Items.Add(posts[i].name);
+            for (int i = 0; i < posts.Count; i++)
+                PostBox.Items.Add(posts[i].name);
             //Add Links
-            for (int i = 0; i < links.Length; i++)
-                LinkBox.Items.Add(links[i]);
+            for (int i = 0; i < links.Count; i++)
+                LinkBox.Items.Add(links[i].name);
         }
 
         private void DeletePost_Click(object sender, EventArgs e)
         {
-            
-            if(PostBox.SelectedIndex != -1)
+
+            if (PostBox.SelectedIndex != -1)
             {
                 PostBox.Items.RemoveAt(PostBox.SelectedIndex);
             }
@@ -53,13 +53,11 @@ namespace FB_Poster_Admin
         {
             LinkAdd pf = new LinkAdd();
             pf.ShowDialog();
-            if(pf.DialogResult == DialogResult.OK) { 
-            string tlink = pf.url;
-            string[] tlinks = new string[links.Length + 1];
-            links.CopyTo(tlinks, 0);
-            tlinks[links.Length] = tlink;
-            links = tlinks;
-            LinkBox.Items.Add(tlink);
+            if (pf.DialogResult == DialogResult.OK)
+            {
+                Post link = new Post(pf.name, pf.url);
+                LinkBox.Items.Add(link.name);
+                links.Add(link);
             }
         }
 
@@ -67,10 +65,10 @@ namespace FB_Poster_Admin
         {
             myftp = new Ftp();
             List<Post> TempPost = new List<Post>();
-            string[] Templinks = new string[LinkBox.Items.Count];
+            List<Post> Templinks = new List<Post>();
 
             // Make Posts
-            for(int i = 0; i< PostBox.Items.Count;i++)
+            for (int i = 0; i < PostBox.Items.Count; i++)
             {
                 for (int j = 0; j < posts.Count; j++)
                 {
@@ -83,11 +81,11 @@ namespace FB_Poster_Admin
             // Make Links
             for (int i = 0; i < LinkBox.Items.Count; i++)
             {
-                for (int j = 0; j < links.Length; j++)
+                for (int j = 0; j < links.Count; j++)
                 {
-                    if (LinkBox.Items[i].ToString() == links[j])
+                    if (LinkBox.Items[i].ToString() == links[j].name)
                     {
-                        Templinks[i] = links[j];
+                        Templinks.Add(new Post(links[j].name, links[j].content));
                     }
                 }
             }
@@ -101,7 +99,7 @@ namespace FB_Poster_Admin
             myftp.CompleteDPath = "ftp://forganicplant@organicplant.ucoz.org/FbPoster/Posts/";
             myftp.UploadFile("Posts.txt");
 
-            File.Delete("links.txt");
+            
             File.Delete("Posts.txt");
         }
 
@@ -109,62 +107,65 @@ namespace FB_Poster_Admin
         {
             PostForm pf = new PostForm();
             pf.ShowDialog();
-            if(pf.DialogResult == DialogResult.OK) { 
-            Post tempPost = new Post(pf.name, pf.desc);
-            posts.Add(tempPost);
-            PostBox.Items.Add(tempPost.name);
+            if (pf.DialogResult == DialogResult.OK)
+            {
+                Post tempPost = new Post(pf.name, pf.desc);
+                posts.Add(tempPost);
+                PostBox.Items.Add(tempPost.name);
             }
         }
 
         private void EditLink(object sender, EventArgs e)
         {
             int index = LinkBox.SelectedIndex;
-            if(index != -1) { 
+            if (index != -1)
+            {
 
-            string str = LinkBox.SelectedItem.ToString();           
-            int linkId = -1;
-            for (int i = 0; i < links.Length; i++)
-            {
-                if(str == links[i])
+                string str = LinkBox.SelectedItem.ToString();
+                int linkId = -1;
+                for (int i = 0; i < links.Count; i++)
                 {
-                    linkId = i;
+                    if (str == links[i].name)
+                    {
+                        linkId = i;
+                    }
                 }
-            }
-            LinkAdd editForm = new LinkAdd(str);
-            editForm.ShowDialog();
-            if(editForm.DialogResult == DialogResult.OK && linkId != -1)
-            {
-                LinkBox.Items.RemoveAt(index);
-                LinkBox.Items.Insert(index, editForm.url);
-                links[linkId] = editForm.url;
-                
-            }
+                LinkAdd editForm = new LinkAdd(str,links[linkId].name);
+                editForm.ShowDialog();
+                if (editForm.DialogResult == DialogResult.OK && linkId != -1)
+                {
+                    LinkBox.Items.RemoveAt(index);
+                    LinkBox.Items.Insert(index, editForm.name);
+                    links[linkId].content = editForm.url;
+                    links[linkId].name = editForm.name;
+                }
             }
         }
 
         private void EditPost(object sender, EventArgs e)
         {
             int index = PostBox.SelectedIndex;
-            if(index != -1) { 
-            string str = PostBox.SelectedItem.ToString();
-            int linkId = -1;
-            for (int i = 0; i < posts.Count; i++)
+            if (index != -1)
             {
-                if (str == posts[i].name)
+                string str = PostBox.SelectedItem.ToString();
+                int linkId = -1;
+                for (int i = 0; i < posts.Count; i++)
                 {
-                    linkId = i;
+                    if (str == posts[i].name)
+                    {
+                        linkId = i;
+                    }
                 }
-            }
-            PostForm editForm = new PostForm(str,posts[linkId].content);
-            editForm.ShowDialog();
-            if (editForm.DialogResult == DialogResult.OK && linkId != -1)
-            {
-                PostBox.Items.RemoveAt(index);
+                PostForm editForm = new PostForm(str, posts[linkId].content);
+                editForm.ShowDialog();
+                if (editForm.DialogResult == DialogResult.OK && linkId != -1)
+                {
+                    PostBox.Items.RemoveAt(index);
                     PostBox.Items.Insert(index, editForm.name);
-                posts[index].content = editForm.desc;
-                posts[index].name = editForm.name;
+                    posts[index].content = editForm.desc;
+                    posts[index].name = editForm.name;
 
-            }
+                }
             }
         }
 
@@ -176,11 +177,11 @@ namespace FB_Poster_Admin
             else
                 tmpList = LinkBox;
 
-            if(tmpList.SelectedIndex != -1 && tmpList.SelectedIndex != tmpList.Items.Count-1)
+            if (tmpList.SelectedIndex != -1 && tmpList.SelectedIndex != tmpList.Items.Count - 1)
             {
                 int select = tmpList.SelectedIndex;
                 string selectstr = tmpList.SelectedItem.ToString();
-                string newstr = tmpList.Items[select+1].ToString();
+                string newstr = tmpList.Items[select + 1].ToString();
                 tmpList.Items.RemoveAt(select);
                 tmpList.Items.Insert(select, newstr);
                 tmpList.Items.RemoveAt(select + 1);
@@ -188,5 +189,25 @@ namespace FB_Poster_Admin
                 tmpList.SelectedIndex = select + 1;
             }
         }
+        private void UpPost(object sender, EventArgs e)
+        {
+            ListBox tmpList;
+            if (sender.Equals(UpPostBtn))
+                tmpList = PostBox;
+            else
+                tmpList = LinkBox;
+
+            if (tmpList.SelectedIndex != -1 && tmpList.SelectedIndex != 0)
+            {
+                int select = tmpList.SelectedIndex;
+                string selectstr = tmpList.SelectedItem.ToString();
+                string newstr = tmpList.Items[select - 1].ToString();
+                tmpList.Items.RemoveAt(select);
+                tmpList.Items.Insert(select, newstr);
+                tmpList.Items.RemoveAt(select - 1);
+                tmpList.Items.Insert(select - 1, selectstr);
+                tmpList.SelectedIndex = select - 1;
+            }
+        }
     }
-    }
+}

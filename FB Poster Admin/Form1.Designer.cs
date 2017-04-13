@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.PostBox = new System.Windows.Forms.ListBox();
             this.RemovePostBtn = new System.Windows.Forms.Button();
             this.AddPostBtn = new System.Windows.Forms.Button();
@@ -37,6 +38,8 @@
             this.Apply = new System.Windows.Forms.Button();
             this.PostDownBtn = new System.Windows.Forms.Button();
             this.LinkDownBtn = new System.Windows.Forms.Button();
+            this.UpPostBtn = new System.Windows.Forms.Button();
+            this.UpLinkBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // PostBox
@@ -56,7 +59,7 @@
             this.RemovePostBtn.Location = new System.Drawing.Point(138, 41);
             this.RemovePostBtn.Name = "RemovePostBtn";
             this.RemovePostBtn.Size = new System.Drawing.Size(23, 23);
-            this.RemovePostBtn.TabIndex = 1;
+            this.RemovePostBtn.TabIndex = 2;
             this.RemovePostBtn.Text = "-";
             this.RemovePostBtn.UseVisualStyleBackColor = false;
             this.RemovePostBtn.Click += new System.EventHandler(this.DeletePost_Click);
@@ -68,7 +71,7 @@
             this.AddPostBtn.Location = new System.Drawing.Point(138, 12);
             this.AddPostBtn.Name = "AddPostBtn";
             this.AddPostBtn.Size = new System.Drawing.Size(23, 23);
-            this.AddPostBtn.TabIndex = 2;
+            this.AddPostBtn.TabIndex = 1;
             this.AddPostBtn.Text = "+";
             this.AddPostBtn.UseVisualStyleBackColor = false;
             this.AddPostBtn.Click += new System.EventHandler(this.AddPost);
@@ -80,7 +83,7 @@
             this.AddLinkBtn.Location = new System.Drawing.Point(307, 13);
             this.AddLinkBtn.Name = "AddLinkBtn";
             this.AddLinkBtn.Size = new System.Drawing.Size(23, 23);
-            this.AddLinkBtn.TabIndex = 5;
+            this.AddLinkBtn.TabIndex = 6;
             this.AddLinkBtn.Text = "+";
             this.AddLinkBtn.UseVisualStyleBackColor = false;
             this.AddLinkBtn.Click += new System.EventHandler(this.AddLink);
@@ -92,7 +95,7 @@
             this.RemoveLinkBtn.Location = new System.Drawing.Point(307, 42);
             this.RemoveLinkBtn.Name = "RemoveLinkBtn";
             this.RemoveLinkBtn.Size = new System.Drawing.Size(23, 23);
-            this.RemoveLinkBtn.TabIndex = 4;
+            this.RemoveLinkBtn.TabIndex = 7;
             this.RemoveLinkBtn.Text = "-";
             this.RemoveLinkBtn.UseVisualStyleBackColor = false;
             this.RemoveLinkBtn.Click += new System.EventHandler(this.DeleteLink);
@@ -104,7 +107,7 @@
             this.LinkBox.Location = new System.Drawing.Point(167, 13);
             this.LinkBox.Name = "LinkBox";
             this.LinkBox.Size = new System.Drawing.Size(134, 197);
-            this.LinkBox.TabIndex = 3;
+            this.LinkBox.TabIndex = 5;
             this.LinkBox.SelectedIndexChanged += new System.EventHandler(this.LinkBox_SelectedIndexChanged);
             this.LinkBox.DoubleClick += new System.EventHandler(this.EditLink);
             // 
@@ -113,7 +116,7 @@
             this.Apply.Location = new System.Drawing.Point(375, 187);
             this.Apply.Name = "Apply";
             this.Apply.Size = new System.Drawing.Size(75, 23);
-            this.Apply.TabIndex = 6;
+            this.Apply.TabIndex = 10;
             this.Apply.Text = "Применить";
             this.Apply.UseVisualStyleBackColor = true;
             this.Apply.Click += new System.EventHandler(this.ApplyChanges);
@@ -122,11 +125,11 @@
             // 
             this.PostDownBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(103)))), ((int)(((byte)(178)))));
             this.PostDownBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.PostDownBtn.Location = new System.Drawing.Point(138, 87);
+            this.PostDownBtn.Location = new System.Drawing.Point(138, 112);
             this.PostDownBtn.Name = "PostDownBtn";
             this.PostDownBtn.Size = new System.Drawing.Size(23, 23);
-            this.PostDownBtn.TabIndex = 7;
-            this.PostDownBtn.Text = "D";
+            this.PostDownBtn.TabIndex = 4;
+            this.PostDownBtn.Text = "˅";
             this.PostDownBtn.UseVisualStyleBackColor = false;
             this.PostDownBtn.Click += new System.EventHandler(this.DownPost);
             // 
@@ -137,10 +140,34 @@
             this.LinkDownBtn.Location = new System.Drawing.Point(307, 112);
             this.LinkDownBtn.Name = "LinkDownBtn";
             this.LinkDownBtn.Size = new System.Drawing.Size(23, 23);
-            this.LinkDownBtn.TabIndex = 8;
-            this.LinkDownBtn.Text = "D";
+            this.LinkDownBtn.TabIndex = 9;
+            this.LinkDownBtn.Text = "˅";
             this.LinkDownBtn.UseVisualStyleBackColor = false;
             this.LinkDownBtn.Click += new System.EventHandler(this.DownPost);
+            // 
+            // UpPostBtn
+            // 
+            this.UpPostBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(103)))), ((int)(((byte)(178)))));
+            this.UpPostBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.UpPostBtn.Location = new System.Drawing.Point(138, 83);
+            this.UpPostBtn.Name = "UpPostBtn";
+            this.UpPostBtn.Size = new System.Drawing.Size(23, 23);
+            this.UpPostBtn.TabIndex = 3;
+            this.UpPostBtn.Text = "˄";
+            this.UpPostBtn.UseVisualStyleBackColor = false;
+            this.UpPostBtn.Click += new System.EventHandler(this.UpPost);
+            // 
+            // UpLinkBtn
+            // 
+            this.UpLinkBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(103)))), ((int)(((byte)(178)))));
+            this.UpLinkBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.UpLinkBtn.Location = new System.Drawing.Point(307, 83);
+            this.UpLinkBtn.Name = "UpLinkBtn";
+            this.UpLinkBtn.Size = new System.Drawing.Size(23, 23);
+            this.UpLinkBtn.TabIndex = 8;
+            this.UpLinkBtn.Text = "˄";
+            this.UpLinkBtn.UseVisualStyleBackColor = false;
+            this.UpLinkBtn.Click += new System.EventHandler(this.UpPost);
             // 
             // Form1
             // 
@@ -148,6 +175,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
             this.ClientSize = new System.Drawing.Size(462, 222);
+            this.Controls.Add(this.UpLinkBtn);
+            this.Controls.Add(this.UpPostBtn);
             this.Controls.Add(this.LinkDownBtn);
             this.Controls.Add(this.PostDownBtn);
             this.Controls.Add(this.Apply);
@@ -158,6 +187,7 @@
             this.Controls.Add(this.RemovePostBtn);
             this.Controls.Add(this.PostBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -175,6 +205,8 @@
         private System.Windows.Forms.Button Apply;
         private System.Windows.Forms.Button PostDownBtn;
         private System.Windows.Forms.Button LinkDownBtn;
+        private System.Windows.Forms.Button UpPostBtn;
+        private System.Windows.Forms.Button UpLinkBtn;
     }
 }
 

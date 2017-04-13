@@ -86,3 +86,5 @@ D:\GitHub Repository\Visual\FbPoster\obj\Debug\FbPoster.csproj.GenerateResource.
 D:\GitHub Repository\Visual\FbPoster\obj\Debug\FbPoster.TrustInfo.xml
 D:\GitHub Repository\Visual\FbPoster\obj\Debug\FbPoster.exe.manifest
 D:\GitHub Repository\Visual\FbPoster\obj\Debug\FbPoster.application
+D:\GitHub Repository\Visual\FbPoster\bin\Debug\FbPoster.exe.CodeAnalysisLog.xml
+D:\GitHub Repository\Visual\FbPoster\bin\Debug\FbPoster.exe.lastcodeanalysissucceeded

@@ -42,7 +42,7 @@
             this.CancelBtn.Location = new System.Drawing.Point(12, 283);
             this.CancelBtn.Name = "CancelBtn";
             this.CancelBtn.Size = new System.Drawing.Size(75, 23);
-            this.CancelBtn.TabIndex = 11;
+            this.CancelBtn.TabIndex = 4;
             this.CancelBtn.Text = "Отмена";
             this.CancelBtn.UseVisualStyleBackColor = true;
             // 
@@ -52,7 +52,7 @@
             this.ApplyBtn.Location = new System.Drawing.Point(243, 283);
             this.ApplyBtn.Name = "ApplyBtn";
             this.ApplyBtn.Size = new System.Drawing.Size(75, 23);
-            this.ApplyBtn.TabIndex = 10;
+            this.ApplyBtn.TabIndex = 3;
             this.ApplyBtn.Text = "Применить";
             this.ApplyBtn.UseVisualStyleBackColor = true;
             this.ApplyBtn.Click += new System.EventHandler(this.ApplyBtn_Click);
@@ -63,14 +63,14 @@
             this.PostDes.Multiline = true;
             this.PostDes.Name = "PostDes";
             this.PostDes.Size = new System.Drawing.Size(306, 191);
-            this.PostDes.TabIndex = 9;
+            this.PostDes.TabIndex = 2;
             // 
             // PostName
             // 
             this.PostName.Location = new System.Drawing.Point(12, 29);
             this.PostName.Name = "PostName";
             this.PostName.Size = new System.Drawing.Size(306, 20);
-            this.PostName.TabIndex = 8;
+            this.PostName.TabIndex = 1;
             // 
             // label2
             // 

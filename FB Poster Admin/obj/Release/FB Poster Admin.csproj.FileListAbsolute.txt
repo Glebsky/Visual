@@ -1,0 +1,11 @@
+D:\GitHub Repository\Visual\FB Poster Admin\bin\Release\FB Poster Admin.exe.config
+D:\GitHub Repository\Visual\FB Poster Admin\bin\Release\FB Poster Admin.exe
+D:\GitHub Repository\Visual\FB Poster Admin\bin\Release\FB Poster Admin.pdb
+D:\GitHub Repository\Visual\FB Poster Admin\obj\Release\FB_Poster_Admin.Form1.resources
+D:\GitHub Repository\Visual\FB Poster Admin\obj\Release\FB_Poster_Admin.LinkAdd.resources
+D:\GitHub Repository\Visual\FB Poster Admin\obj\Release\FB_Poster_Admin.PostForm.resources
+D:\GitHub Repository\Visual\FB Poster Admin\obj\Release\FB_Poster_Admin.Properties.Resources.resources
+D:\GitHub Repository\Visual\FB Poster Admin\obj\Release\FB Poster Admin.csproj.GenerateResource.Cache
+D:\GitHub Repository\Visual\FB Poster Admin\obj\Release\FB Poster Admin.exe
+D:\GitHub Repository\Visual\FB Poster Admin\obj\Release\FB Poster Admin.pdb
+D:\GitHub Repository\Visual\FB Poster Admin\obj\Release\FB Poster Admin.csprojResolveAssemblyReference.cache

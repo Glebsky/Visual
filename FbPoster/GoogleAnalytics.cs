@@ -15,8 +15,9 @@ namespace FbPoster
         public string GoogleAnalyticsUrl;
         public string NameUrl;
 
-        public GoogleAnalytics(string url) {
+        public GoogleAnalytics(string url, string name) {
             BaseUri = url;
+            NameUrl = name;
             GoogleAnalyticsUrl = "";
             ParseGAUrl();
             DownloadHtml();
@@ -30,21 +31,8 @@ namespace FbPoster
                 if (BaseUri.Contains(mask))
                 {
                     int i = BaseUri.IndexOf(mask) + mask.Length;
-                    NameUrl = BaseUri.Substring(i);
-                    GoogleAnalyticsUrl = "https://www.googleapis.com/urlshortener/v1/url?shortUrl=https%3A%2F%2Fgoo.gl%2F" + NameUrl + "&projection=ANALYTICS_CLICKS&fields=analytics(day%2Cmonth%2CtwoHours%2Cweek)&key=AIzaSyDb9z0f5DiMDB0_hPm-31JZJLDrYX_D9NI";
-                }
-                else
-                {
-                    try { 
-                    mask = "//";
-                    int i = BaseUri.IndexOf(mask) + mask.Length;
-                    mask = "/";
-                    int lenght = BaseUri.IndexOf(mask, i);
-                    lenght -= i;
-                    NameUrl = BaseUri.Substring(i, lenght);
-                    }catch(Exception) {
-                        NameUrl = BaseUri;
-                    }
+                    string tempUrl = BaseUri.Substring(i);
+                    GoogleAnalyticsUrl = "https://www.googleapis.com/urlshortener/v1/url?shortUrl=https%3A%2F%2Fgoo.gl%2F" + tempUrl + "&projection=ANALYTICS_CLICKS&fields=analytics(day%2Cmonth%2CtwoHours%2Cweek)&key=AIzaSyDb9z0f5DiMDB0_hPm-31JZJLDrYX_D9NI";
                 }
             }
             catch (Exception er) { MessageBox.Show(er.Message, "Неудалось распарсить ссылки"); }
@@ -56,7 +44,7 @@ namespace FbPoster
             html = HtmlDownloadHelper.DownloadHtml(GoogleAnalyticsUrl);
             return true;
             }
-            catch(Exception e)
+            catch(Exception)
             {
                 return false;
             }
@@ -73,7 +61,7 @@ namespace FbPoster
             res = res.Substring(0, pos);
             return res;
             }
-            catch(NullReferenceException ex)
+            catch(NullReferenceException)
             {
                 return "--";
             }
@@ -89,7 +77,7 @@ namespace FbPoster
             res = res.Substring(0, pos);
             return res;
             }
-            catch (NullReferenceException ex)
+            catch (NullReferenceException)
             {
                 return "--";
             }
@@ -105,7 +93,7 @@ namespace FbPoster
             res = res.Substring(0, pos);
             return res;
         }
-            catch (NullReferenceException ex)
+            catch (NullReferenceException )
             {
                 return "--";
     }

@@ -13,22 +13,27 @@ namespace FB_Poster_Admin
     public partial class LinkAdd : Form
     {
         public string url;
+        public string name;
         public LinkAdd()
         {
             InitializeComponent();
         }
 
-        public LinkAdd(string link)
+        public LinkAdd(string link,string name)
         {
             InitializeComponent();
             PostName.Text = link;
+            LinkDesFld.Text = name;
             url = link;
+            this.name = name;
         }
 
         private void ApplyBtn_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(PostName.Text))
+            if (!string.IsNullOrEmpty(PostName.Text) && !string.IsNullOrEmpty(LinkDesFld.Text)) { 
                 url = PostName.Text;
+                name = LinkDesFld.Text;
+            }
             else
                 DialogResult = DialogResult.Cancel;
         }

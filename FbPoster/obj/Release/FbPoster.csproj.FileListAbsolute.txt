@@ -86,3 +86,47 @@ C:\Users\Gleb\Desktop\FbPoster\obj\Release\FbPoster.exe.manifest
 C:\Users\Gleb\Desktop\FbPoster\obj\Release\FbPoster.application
 C:\Users\Gleb\Desktop\FbPoster\obj\Release\FbPoster.exe
 C:\Users\Gleb\Desktop\FbPoster\obj\Release\FbPoster.pdb
+D:\GitHub Repository\Visual\FbPoster\bin\Release\FbPoster.exe.config
+D:\GitHub Repository\Visual\FbPoster\obj\Release\FbPoster.exe
+D:\GitHub Repository\Visual\FbPoster\obj\Release\FbPoster.pdb
+D:\GitHub Repository\Visual\FbPoster\bin\Release\FbPoster.exe.manifest
+D:\GitHub Repository\Visual\FbPoster\bin\Release\FbPoster.application
+D:\GitHub Repository\Visual\FbPoster\bin\Release\FbPoster.exe
+D:\GitHub Repository\Visual\FbPoster\bin\Release\FbPoster.pdb
+D:\GitHub Repository\Visual\FbPoster\bin\Release\Google.Apis.Auth.dll
+D:\GitHub Repository\Visual\FbPoster\bin\Release\Google.Apis.Auth.PlatformServices.dll
+D:\GitHub Repository\Visual\FbPoster\bin\Release\Google.Apis.Core.dll
+D:\GitHub Repository\Visual\FbPoster\bin\Release\Google.Apis.dll
+D:\GitHub Repository\Visual\FbPoster\bin\Release\Google.Apis.PlatformServices.dll
+D:\GitHub Repository\Visual\FbPoster\bin\Release\Google.Apis.Urlshortener.v1.dll
+D:\GitHub Repository\Visual\FbPoster\bin\Release\Newtonsoft.Json.dll
+D:\GitHub Repository\Visual\FbPoster\bin\Release\Zlib.Portable.dll
+D:\GitHub Repository\Visual\FbPoster\bin\Release\Google.Apis.pdb
+D:\GitHub Repository\Visual\FbPoster\bin\Release\Google.Apis.xml
+D:\GitHub Repository\Visual\FbPoster\bin\Release\Google.Apis.Auth.pdb
+D:\GitHub Repository\Visual\FbPoster\bin\Release\Google.Apis.Auth.xml
+D:\GitHub Repository\Visual\FbPoster\bin\Release\Google.Apis.Auth.PlatformServices.pdb
+D:\GitHub Repository\Visual\FbPoster\bin\Release\Google.Apis.Auth.PlatformServices.xml
+D:\GitHub Repository\Visual\FbPoster\bin\Release\Google.Apis.Core.pdb
+D:\GitHub Repository\Visual\FbPoster\bin\Release\Google.Apis.Core.xml
+D:\GitHub Repository\Visual\FbPoster\bin\Release\Google.Apis.PlatformServices.pdb
+D:\GitHub Repository\Visual\FbPoster\bin\Release\Google.Apis.PlatformServices.xml
+D:\GitHub Repository\Visual\FbPoster\bin\Release\Google.Apis.Urlshortener.v1.pdb
+D:\GitHub Repository\Visual\FbPoster\bin\Release\Google.Apis.Urlshortener.v1.xml
+D:\GitHub Repository\Visual\FbPoster\bin\Release\Newtonsoft.Json.xml
+D:\GitHub Repository\Visual\FbPoster\bin\Release\Zlib.Portable.xml
+D:\GitHub Repository\Visual\FbPoster\obj\Release\FbPoster.csprojResolveAssemblyReference.cache
+D:\GitHub Repository\Visual\FbPoster\obj\Release\MainWindow.g.cs
+D:\GitHub Repository\Visual\FbPoster\obj\Release\Options.g.cs
+D:\GitHub Repository\Visual\FbPoster\obj\Release\App.g.cs
+D:\GitHub Repository\Visual\FbPoster\obj\Release\FbPoster_MarkupCompile.cache
+D:\GitHub Repository\Visual\FbPoster\obj\Release\FbPoster_MarkupCompile.lref
+D:\GitHub Repository\Visual\FbPoster\obj\Release\App.baml
+D:\GitHub Repository\Visual\FbPoster\obj\Release\MainWindow.baml
+D:\GitHub Repository\Visual\FbPoster\obj\Release\Options.baml
+D:\GitHub Repository\Visual\FbPoster\obj\Release\FbPoster.g.resources
+D:\GitHub Repository\Visual\FbPoster\obj\Release\FbPoster.Properties.Resources.resources
+D:\GitHub Repository\Visual\FbPoster\obj\Release\FbPoster.csproj.GenerateResource.Cache
+D:\GitHub Repository\Visual\FbPoster\obj\Release\FbPoster.TrustInfo.xml
+D:\GitHub Repository\Visual\FbPoster\obj\Release\FbPoster.exe.manifest
+D:\GitHub Repository\Visual\FbPoster\obj\Release\FbPoster.application

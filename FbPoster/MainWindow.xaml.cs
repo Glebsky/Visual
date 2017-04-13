@@ -41,8 +41,9 @@ namespace FbPoster
         {
             InitializeComponent();
             isMaxState = true;
-            gkh.HookedKeys.Add(System.Windows.Forms.Keys.F2);
-            gkh.HookedKeys.Add(System.Windows.Forms.Keys.F4);
+            // HotKeys Set
+            gkh.HookedKeys.Add(System.Windows.Forms.Keys.D1);
+            gkh.HookedKeys.Add(System.Windows.Forms.Keys.D2);
             gkh.KeyUp += new System.Windows.Forms.KeyEventHandler(gkh_KeyUp);
             optseconds = 600;
             isTimerWork = true;
@@ -52,10 +53,10 @@ namespace FbPoster
             {
                 parser = new TextParser("http://organicplant.ucoz.org/FbPoster/links.txt");
 
-                string[] links = parser.ParseLinks("http://organicplant.ucoz.org/FbPoster/links.txt");
-                for (int i = 0; i < links.Length; i++)
+                List<Post> links = parser.ParseLinks("http://organicplant.ucoz.org/FbPoster/links.txt");
+                for (int i = 0; i < links.Count; i++)
                 {
-                    google.Add(new GoogleAnalytics(links[i]));
+                    google.Add(new GoogleAnalytics(links[i].Content, links[i].Name));
                 }
             }
             catch (Exception ex)
@@ -93,14 +94,13 @@ namespace FbPoster
 
         void gkh_KeyUp(object sender, System.Windows.Forms.KeyEventArgs e)
         {
-            if (e.KeyCode == System.Windows.Forms.Keys.F2)
+            if (e.KeyCode == System.Windows.Forms.Keys.D1)
             {
                 CopyRandomPostToClip(sender, new RoutedEventArgs());
             }
-            if (e.KeyCode == System.Windows.Forms.Keys.F4)
+            if (e.KeyCode == System.Windows.Forms.Keys.D2)
             {
                 CopyPostToClip(sender, new RoutedEventArgs());
-                Minimize();
             }
         }
 
@@ -396,6 +396,11 @@ namespace FbPoster
                 Maximize();
                 isMaxState = true;
             }
+        }
+
+        private void tabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

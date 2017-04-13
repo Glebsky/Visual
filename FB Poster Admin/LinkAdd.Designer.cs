@@ -32,25 +32,27 @@
             this.ApplyBtn = new System.Windows.Forms.Button();
             this.PostName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.LinkDesFld = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // CancelBtn
             // 
             this.CancelBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.CancelBtn.Location = new System.Drawing.Point(12, 52);
+            this.CancelBtn.Location = new System.Drawing.Point(12, 97);
             this.CancelBtn.Name = "CancelBtn";
             this.CancelBtn.Size = new System.Drawing.Size(75, 23);
-            this.CancelBtn.TabIndex = 16;
+            this.CancelBtn.TabIndex = 4;
             this.CancelBtn.Text = "Отмена";
             this.CancelBtn.UseVisualStyleBackColor = true;
             // 
             // ApplyBtn
             // 
             this.ApplyBtn.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.ApplyBtn.Location = new System.Drawing.Point(243, 52);
+            this.ApplyBtn.Location = new System.Drawing.Point(243, 97);
             this.ApplyBtn.Name = "ApplyBtn";
             this.ApplyBtn.Size = new System.Drawing.Size(75, 23);
-            this.ApplyBtn.TabIndex = 15;
+            this.ApplyBtn.TabIndex = 3;
             this.ApplyBtn.Text = "Применить";
             this.ApplyBtn.UseVisualStyleBackColor = true;
             this.ApplyBtn.Click += new System.EventHandler(this.ApplyBtn_Click);
@@ -60,7 +62,7 @@
             this.PostName.Location = new System.Drawing.Point(12, 26);
             this.PostName.Name = "PostName";
             this.PostName.Size = new System.Drawing.Size(306, 20);
-            this.PostName.TabIndex = 13;
+            this.PostName.TabIndex = 1;
             // 
             // label1
             // 
@@ -71,11 +73,29 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Адресс ссылки";
             // 
+            // LinkDesFld
+            // 
+            this.LinkDesFld.Location = new System.Drawing.Point(12, 65);
+            this.LinkDesFld.Name = "LinkDesFld";
+            this.LinkDesFld.Size = new System.Drawing.Size(306, 20);
+            this.LinkDesFld.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(9, 49);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 13);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Описание ссылки";
+            // 
             // LinkAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(327, 88);
+            this.ClientSize = new System.Drawing.Size(327, 132);
+            this.Controls.Add(this.LinkDesFld);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.CancelBtn);
             this.Controls.Add(this.ApplyBtn);
             this.Controls.Add(this.PostName);
@@ -94,5 +114,7 @@
         private System.Windows.Forms.Button ApplyBtn;
         private System.Windows.Forms.TextBox PostName;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox LinkDesFld;
+        private System.Windows.Forms.Label label2;
     }
 }
