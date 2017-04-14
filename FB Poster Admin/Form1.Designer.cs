@@ -108,7 +108,6 @@
             this.LinkBox.Name = "LinkBox";
             this.LinkBox.Size = new System.Drawing.Size(134, 197);
             this.LinkBox.TabIndex = 5;
-            this.LinkBox.SelectedIndexChanged += new System.EventHandler(this.LinkBox_SelectedIndexChanged);
             this.LinkBox.DoubleClick += new System.EventHandler(this.EditLink);
             // 
             // Apply
@@ -189,7 +188,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "FB Poster Admin";
             this.ResumeLayout(false);
 
         }

@@ -39,11 +39,6 @@ namespace FB_Poster_Admin
             }
         }
 
-        private void LinkBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void DeleteLink(object sender, EventArgs e)
         {
             LinkBox.Items.Remove(LinkBox.SelectedItem);
@@ -99,7 +94,7 @@ namespace FB_Poster_Admin
             myftp.CompleteDPath = "ftp://forganicplant@organicplant.ucoz.org/FbPoster/Posts/";
             myftp.UploadFile("Posts.txt");
 
-            
+            File.Delete("links.txt");
             File.Delete("Posts.txt");
         }
 
@@ -130,7 +125,7 @@ namespace FB_Poster_Admin
                         linkId = i;
                     }
                 }
-                LinkAdd editForm = new LinkAdd(str,links[linkId].name);
+                LinkAdd editForm = new LinkAdd(links[linkId].content,links[linkId].name);
                 editForm.ShowDialog();
                 if (editForm.DialogResult == DialogResult.OK && linkId != -1)
                 {

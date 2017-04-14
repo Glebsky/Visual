@@ -15,13 +15,16 @@ namespace FB_Poster_Admin
         public static void FormLinks(List<Post> links)
         {
             StreamWriter sr = new StreamWriter("links.txt");
+            string res;
             try
             {
                 for (int i = 0; i < links.Count; i++) {
+                    res = links[i].name;
                     if (i == links.Count - 1) ;
-                    else
-                        links[i].name += "\n";
-                    sr.Write(links[i].content+"###"+links[i].name);
+                    else {
+                        res = links[i].name + "\n";
+                    }
+                    sr.Write(links[i].content+"###"+ res);
                 }
                 sr.Flush();
                 sr.Close();
