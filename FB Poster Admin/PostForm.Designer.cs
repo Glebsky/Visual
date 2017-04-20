@@ -59,6 +59,7 @@
             // 
             // PostDes
             // 
+            this.PostDes.AcceptsReturn = true;
             this.PostDes.Location = new System.Drawing.Point(12, 86);
             this.PostDes.Multiline = true;
             this.PostDes.Name = "PostDes";

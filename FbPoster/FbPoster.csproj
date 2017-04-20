@@ -141,6 +141,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ExcelActions.cs" />
     <Compile Include="HotKeys.cs" />
     <Compile Include="Options.xaml.cs">
       <DependentUpon>Options.xaml</DependentUpon>
@@ -222,6 +223,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="FbPostericon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\link.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

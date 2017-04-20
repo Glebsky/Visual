@@ -10,16 +10,41 @@
        <Types>
         <Type Name="App" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ComVisibleTypeBaseTypesShouldBeComVisible" Category="Microsoft.Interoperability" CheckId="CA1405" Status="Active" Created="2017-04-13 12:37:54Z" FixCategory="DependsOnFix">
+          <Message TypeName="ComVisibleTypeBaseTypesShouldBeComVisible" Category="Microsoft.Interoperability" CheckId="CA1405" Status="Active" Created="2017-04-20 12:34:59Z" FixCategory="DependsOnFix">
            <Issue Certainty="90" Level="Error">'App' is marked ComVisible(true) but has the following ComVisible(false) types in its object hierarchy: 'Application', 'DispatcherObject'</Issue>
           </Message>
          </Messages>
+        </Type>
+        <Type Name="ExcelActions" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#AddPost()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Windows.Forms.MessageBox.Show(System.String,System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2017-04-20 12:34:59Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\GitHub Repository\Visual\FbPoster" File="ExcelActions.cs" Line="101">Method 'ExcelActions.AddPost()' passes a literal string as parameter 'caption' of a call to 'MessageBox.Show(string, string)'. Retrieve the following string(s) from a resource table instead: "Ошибка".</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DeletePost()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Windows.Forms.MessageBox.Show(System.String,System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2017-04-20 12:34:59Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\GitHub Repository\Visual\FbPoster" File="ExcelActions.cs" Line="77">Method 'ExcelActions.DeletePost()' passes a literal string as parameter 'caption' of a call to 'MessageBox.Show(string, string)'. Retrieve the following string(s) from a resource table instead: "Ошибка".</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetPosts()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Windows.Forms.MessageBox.Show(System.String,System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2017-04-20 12:34:59Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\GitHub Repository\Visual\FbPoster" File="ExcelActions.cs" Line="52">Method 'ExcelActions.GetPosts()' passes a literal string as parameter 'caption' of a call to 'MessageBox.Show(string, string)'. Retrieve the following string(s) from a resource table instead: "Ошибка".</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
         </Type>
         <Type Name="GoogleAnalytics" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
          <Members>
           <Member Name="#ParseGAUrl()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="System.Windows.MessageBox.Show(System.String,System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2017-04-13 12:37:54Z" FixCategory="DependsOnFix">
+            <Message Id="System.Windows.MessageBox.Show(System.String,System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2017-04-20 12:34:59Z" FixCategory="DependsOnFix">
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\GitHub Repository\Visual\FbPoster" File="GoogleAnalytics.cs" Line="38">Method 'GoogleAnalytics.ParseGAUrl()' passes a literal string as parameter 'caption' of a call to 'MessageBox.Show(string, string)'. Retrieve the following string(s) from a resource table instead: "Неудалось распарсить ссылки".</Issue>
             </Message>
            </Messages>
@@ -28,51 +53,51 @@
         </Type>
         <Type Name="HotKeys" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
          <Messages>
-          <Message TypeName="TypesThatOwnNativeResourcesShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1049" Status="Active" Created="2017-04-13 12:37:54Z" FixCategory="NonBreaking">
+          <Message TypeName="TypesThatOwnNativeResourcesShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1049" Status="Active" Created="2017-04-20 12:34:59Z" FixCategory="NonBreaking">
            <Issue Certainty="50" Level="CriticalError">Implement IDisposable on 'HotKeys'.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#CallNextHookEx(System.IntPtr,System.Int32,System.Int32,FbPoster.HotKeys+keyboardHookStruct&amp;)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2017-04-13 12:37:54Z" FixCategory="Breaking">
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2017-04-20 12:34:59Z" FixCategory="Breaking">
              <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'HotKeys.CallNextHookEx(IntPtr, int, int, ref HotKeys.keyboardHookStruct)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
             </Message>
-            <Message Id="2" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Status="Active" Created="2017-04-13 12:37:54Z" FixCategory="NonBreaking">
+            <Message Id="2" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Status="Active" Created="2017-04-20 12:34:59Z" FixCategory="NonBreaking">
              <Issue Name="Parameter" Certainty="95" Level="Error">As it is declared in your code, parameter 'wParam' of P/Invoke 'HotKeys.CallNextHookEx(IntPtr, int, int, ref HotKeys.keyboardHookStruct)' will be 4 bytes wide on 64-bit platforms. This is not correct, as the actual native declaration of this API indicates it should be 8 bytes wide on 64-bit platforms. Consult the MSDN Platform SDK documentation for help determining what data type should be used instead of 'int'.</Issue>
             </Message>
-            <Message Id="return" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Status="Active" Created="2017-04-13 12:37:54Z" FixCategory="NonBreaking">
+            <Message Id="return" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Status="Active" Created="2017-04-20 12:34:59Z" FixCategory="NonBreaking">
              <Issue Name="Return" Certainty="95" Level="Error">As it is declared in your code, the return type of P/Invoke 'HotKeys.CallNextHookEx(IntPtr, int, int, ref HotKeys.keyboardHookStruct)' will be 4 bytes wide on 64-bit platforms. This is not correct, as the actual native declaration of this API indicates it should be 8 bytes wide on 64-bit platforms. Consult the MSDN Platform SDK documentation for help determining what data type should be used instead of 'int'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#hhook" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="UseSafeHandleToEncapsulateNativeResources" Category="Microsoft.Reliability" CheckId="CA2006" Status="Active" Created="2017-04-13 12:37:54Z" FixCategory="NonBreaking">
+            <Message TypeName="UseSafeHandleToEncapsulateNativeResources" Category="Microsoft.Reliability" CheckId="CA2006" Status="Active" Created="2017-04-20 12:34:59Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="CriticalWarning">Review usage of 'HotKeys.hhook' (a 'IntPtr' instance) to determine whether it should be replaced with a SafeHandle or CriticalHandle.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#LoadLibrary(System.String)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2017-04-13 12:37:54Z" FixCategory="Breaking">
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2017-04-20 12:34:59Z" FixCategory="Breaking">
              <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'HotKeys.LoadLibrary(string)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
             </Message>
-            <Message Id="0" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2017-04-13 12:37:54Z" FixCategory="NonBreaking">
+            <Message Id="0" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2017-04-20 12:34:59Z" FixCategory="NonBreaking">
              <Issue Name="ParameterImplicitAnsi" Certainty="75" Level="Error">To reduce security risk, marshal parameter 'lpFileName' as Unicode, by setting DllImport.CharSet to CharSet.Unicode, or by explicitly marshaling the parameter as UnmanagedType.LPWStr. If you need to marshal this string as ANSI or system-dependent, specify MarshalAs explicitly, and set BestFitMapping=false; for added security, also set ThrowOnUnmappableChar=true.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#SetWindowsHookEx(System.Int32,FbPoster.HotKeys+keyboardHookProc,System.IntPtr,System.UInt32)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2017-04-13 12:37:54Z" FixCategory="Breaking">
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2017-04-20 12:34:59Z" FixCategory="Breaking">
              <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'HotKeys.SetWindowsHookEx(int, HotKeys.keyboardHookProc, IntPtr, uint)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#UnhookWindowsHookEx(System.IntPtr)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2017-04-13 12:37:54Z" FixCategory="Breaking">
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2017-04-20 12:34:59Z" FixCategory="Breaking">
              <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'HotKeys.UnhookWindowsHookEx(IntPtr)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
             </Message>
            </Messages>
@@ -81,14 +106,14 @@
         </Type>
         <Type Name="MainWindow" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ComVisibleTypeBaseTypesShouldBeComVisible" Category="Microsoft.Interoperability" CheckId="CA1405" Status="Active" Created="2017-04-13 12:37:54Z" FixCategory="DependsOnFix">
+          <Message TypeName="ComVisibleTypeBaseTypesShouldBeComVisible" Category="Microsoft.Interoperability" CheckId="CA1405" Status="Active" Created="2017-04-20 12:34:59Z" FixCategory="DependsOnFix">
            <Issue Certainty="90" Level="Error">'MainWindow' is marked ComVisible(true) but has the following ComVisible(false) types in its object hierarchy: 'Window', 'ContentControl', 'Control', 'FrameworkElement', 'UIElement', 'Visual', 'DependencyObject', 'DispatcherObject'</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="System.Windows.MessageBox.Show(System.String,System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2017-04-13 12:37:54Z" FixCategory="DependsOnFix">
+            <Message Id="System.Windows.MessageBox.Show(System.String,System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2017-04-20 12:34:59Z" FixCategory="DependsOnFix">
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\GitHub Repository\Visual\FbPoster" File="MainWindow.xaml.cs" Line="64">Method 'MainWindow.MainWindow()' passes a literal string as parameter 'caption' of a call to 'MessageBox.Show(string, string)'. Retrieve the following string(s) from a resource table instead: "Не удалось загрузить ссылки".</Issue>
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\GitHub Repository\Visual\FbPoster" File="MainWindow.xaml.cs" Line="80">Method 'MainWindow.MainWindow()' passes a literal string as parameter 'caption' of a call to 'MessageBox.Show(string, string)'. Retrieve the following string(s) from a resource table instead: "Не удалось загрузить ссылки".</Issue>
             </Message>
@@ -96,21 +121,21 @@
           </Member>
           <Member Name="#CopyPostToClip(System.Object,System.Windows.RoutedEventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="System.Windows.MessageBox.Show(System.String,System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2017-04-13 12:37:54Z" FixCategory="DependsOnFix">
+            <Message Id="System.Windows.MessageBox.Show(System.String,System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2017-04-20 12:34:59Z" FixCategory="DependsOnFix">
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\GitHub Repository\Visual\FbPoster" File="MainWindow.xaml.cs" Line="287">Method 'MainWindow.CopyPostToClip(object, RoutedEventArgs)' passes a literal string as parameter 'caption' of a call to 'MessageBox.Show(string, string)'. Retrieve the following string(s) from a resource table instead: "Не удолось скопировать пост".</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#CopyRandomPostToClip(System.Object,System.Windows.RoutedEventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="System.Windows.MessageBox.Show(System.String,System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2017-04-13 12:37:54Z" FixCategory="DependsOnFix">
+            <Message Id="System.Windows.MessageBox.Show(System.String,System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2017-04-20 12:34:59Z" FixCategory="DependsOnFix">
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\GitHub Repository\Visual\FbPoster" File="MainWindow.xaml.cs" Line="327">Method 'MainWindow.CopyRandomPostToClip(object, RoutedEventArgs)' passes a literal string as parameter 'caption' of a call to 'MessageBox.Show(string, string)'. Retrieve the following string(s) from a resource table instead: "Не удолось скопировать пост".</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#CopyToClip(System.Object,System.Windows.RoutedEventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="System.Windows.MessageBox.Show(System.String,System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2017-04-13 12:37:54Z" FixCategory="DependsOnFix">
+            <Message Id="System.Windows.MessageBox.Show(System.String,System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2017-04-20 12:34:59Z" FixCategory="DependsOnFix">
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\GitHub Repository\Visual\FbPoster" File="MainWindow.xaml.cs" Line="346">Method 'MainWindow.CopyToClip(object, RoutedEventArgs)' passes a literal string as parameter 'caption' of a call to 'MessageBox.Show(string, string)'. Retrieve the following string(s) from a resource table instead: "Не удолось скопировать ссылку".</Issue>
             </Message>
            </Messages>
@@ -119,7 +144,7 @@
         </Type>
         <Type Name="Options" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ComVisibleTypeBaseTypesShouldBeComVisible" Category="Microsoft.Interoperability" CheckId="CA1405" Status="Active" Created="2017-04-13 12:37:54Z" FixCategory="DependsOnFix">
+          <Message TypeName="ComVisibleTypeBaseTypesShouldBeComVisible" Category="Microsoft.Interoperability" CheckId="CA1405" Status="Active" Created="2017-04-20 12:34:59Z" FixCategory="DependsOnFix">
            <Issue Certainty="90" Level="Error">'Options' is marked ComVisible(true) but has the following ComVisible(false) types in its object hierarchy: 'Window', 'ContentControl', 'Control', 'FrameworkElement', 'UIElement', 'Visual', 'DependencyObject', 'DispatcherObject'</Issue>
           </Message>
          </Messages>

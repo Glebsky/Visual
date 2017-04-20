@@ -402,5 +402,18 @@ namespace FbPoster
         {
 
         }
+
+        private void GoToStat(object sender, MouseButtonEventArgs e)
+        {
+            string str = LinkBox.SelectedValue.ToString();
+            for (int i = 0; i < google.Count; i++)
+            {
+                if(str == google[i].NameUrl)
+                {
+                    System.Diagnostics.Process.Start("");
+                }
+            }
+            
+        }
     }
 }

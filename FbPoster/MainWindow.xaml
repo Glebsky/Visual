@@ -56,6 +56,7 @@
         <Image x:Name="TimerStop" Grid.Column="1" HorizontalAlignment="Right" Height="26" Margin="0,7,67,0" VerticalAlignment="Top" Width="26" Source="Resource/stopTime.png" Cursor="Hand" MouseDown="StopTimer" SnapsToDevicePixels="True" ClipToBounds="True" Stretch="Fill" />
         <Image x:Name="Preferences" Grid.Column="1" HorizontalAlignment="Right" Margin="0,7,30,0" Width="26" Source="Resource/preferences.png" Cursor="Hand" MouseDown="OptionsDialog" SnapsToDevicePixels="True" ClipToBounds="True" VerticalAlignment="Top" Stretch="Fill" Height="26" />
         <Image x:Name="MiniBtn" Grid.Column="1" HorizontalAlignment="Right" Height="26" Margin="0,7,104,0" VerticalAlignment="Top" Width="26" Source="Resource/minimize.png" Cursor="Hand" MouseDown="ChangeState" SnapsToDevicePixels="True" ClipToBounds="True" Stretch="Fill" />
+        <Image x:Name="LinkBtn" Grid.Column="1" HorizontalAlignment="Right" Height="16" Margin="0,54,14,0" VerticalAlignment="Top" Width="16" Source="Resource/link.png" Cursor="Hand" MouseDown="GoToStat"/>
 
     </Grid>
 </Window>

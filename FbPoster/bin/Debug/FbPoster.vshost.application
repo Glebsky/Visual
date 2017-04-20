@@ -9,14 +9,14 @@
     <framework targetVersion="4.5.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="FbPoster.exe.manifest" size="10596">
+    <dependentAssembly dependencyType="install" codebase="FbPoster.exe.manifest" size="10604">
       <assemblyIdentity name="FbPoster.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="ru-RU" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>CDhjwJIb/lF/njFXp2MSrM7T53z3gv0p7xLWnLBRBr4=</dsig:DigestValue>
+        <dsig:DigestValue>gIdekk5qCbVNDgm0jPP5/KnMzurz5WgJMeCDvENPIqo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
