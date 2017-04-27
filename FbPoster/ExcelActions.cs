@@ -19,7 +19,7 @@ namespace FbPoster
             //DOWNLOAD FILE
             var client = new WebClient();
             String url = "http://organicplant.ucoz.org/FbPoster/Posts.xlsx";
-            fullPath = Path.GetTempPath();
+            fullPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             fullPath += "Posts.xlsx";
             client.DownloadFile(url, fullPath);
         }
