@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FbPoster.exe" size="805856">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FbPoster.exe" size="806880">
       <assemblyIdentity name="FbPoster" version="1.0.0.1" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>UJJP7h41sP8uvhM++13QiauvPvlaMU6cY/RaIwqlq5g=</dsig:DigestValue>
+        <dsig:DigestValue>CWlqkmVpM+ZiiI9UTDqd7ORnYRJind3+5HNKwYhjVrM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

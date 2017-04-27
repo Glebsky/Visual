@@ -31,7 +31,7 @@ namespace FbPoster
         int optseconds;
         int seconds;
 
-        //bools
+        //bools For Settings
         bool isMaxState;
         bool isTimerWork;
         bool isTopMost;
@@ -62,7 +62,7 @@ namespace FbPoster
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Не удалось загрузить ссылки");
-                
+
             }
 
             //posts
@@ -130,10 +130,10 @@ namespace FbPoster
             PostMessage.Visibility = Visibility.Hidden;
             image.Visibility = Visibility.Hidden;
             PostButton4.Visibility = Visibility.Hidden;
-            CopyLink.Visibility = Visibility.Hidden; 
+            CopyLink.Visibility = Visibility.Hidden;
             StatBack.Visibility = Visibility.Hidden;
-            TimerBack.Visibility = Visibility.Hidden; 
-            PostBack.Visibility = Visibility.Hidden; 
+            TimerBack.Visibility = Visibility.Hidden;
+            PostBack.Visibility = Visibility.Hidden;
             LinkBox.Margin = new Thickness(0, 0, 85, 0);
             TimerStop.Margin = new Thickness(0, 7, 30, 0);
             Preferences.Margin = new Thickness(0, 7, 4, 0);
@@ -388,11 +388,13 @@ namespace FbPoster
 
         private void ChangeState(object sender, MouseButtonEventArgs e)
         {
-            if (isMaxState) { 
+            if (isMaxState)
+            {
                 Minimize();
                 isMaxState = false;
             }
-            else { 
+            else
+            {
                 Maximize();
                 isMaxState = true;
             }
@@ -405,15 +407,17 @@ namespace FbPoster
 
         private void GoToStat(object sender, MouseButtonEventArgs e)
         {
+            string html = HtmlDownloadHelper.DownloadHtml("https://sheets.googleapis.com/v4/spreadsheets/1kZhb0tZE7wg5upmZPmZszsvs6NxjAa9oeoO9_abuJsU?includeGridData=false&ranges=A1&ranges=B2&fields=namedRanges%2Cproperties%2Csheets%2CspreadsheetId%2CspreadsheetUrl&key=AIzaSyDb9z0f5DiMDB0_hPm-31JZJLDrYX_D9NI");
             string str = LinkBox.SelectedValue.ToString();
             for (int i = 0; i < google.Count; i++)
             {
-                if(str == google[i].NameUrl)
+                if (str == google[i].NameUrl && google[i].BaseUri.Contains("https://goo.gl/"))
                 {
-                    System.Diagnostics.Process.Start("");
+                    string tempstr = google[i].BaseUri.Substring(15);
+                    System.Diagnostics.Process.Start("https://goo.gl/#analytics/goo.gl/" + tempstr + "/day");
                 }
             }
-            
+
         }
     }
 }
