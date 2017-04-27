@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FbPoster.Properties
+namespace FBGroups_Parser.Properties
 {
 
 

@@ -405,12 +405,24 @@ namespace FbPoster
 
         private void GoToStat(object sender, MouseButtonEventArgs e)
         {
+            
             string str = LinkBox.SelectedValue.ToString();
             for (int i = 0; i < google.Count; i++)
             {
                 if(str == google[i].NameUrl)
                 {
-                    System.Diagnostics.Process.Start("");
+                    try
+                    {
+                        string mask = "https://goo.gl/";
+                        if (google[i].BaseUri.Contains(mask))
+                        {
+                            int pos = google[i].BaseUri.IndexOf(mask) + mask.Length;
+                            string tempUrl = google[i].BaseUri.Substring(pos);
+                            string statUrl = "https://goo.gl/#analytics/goo.gl/"+tempUrl+"/day";
+                            System.Diagnostics.Process.Start(statUrl);
+                        }
+                    }
+                    catch (Exception) { }
                 }
             }
             
