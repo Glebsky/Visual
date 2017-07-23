@@ -47,6 +47,7 @@
             this.lbWork.Name = "lbWork";
             this.lbWork.Size = new System.Drawing.Size(120, 121);
             this.lbWork.TabIndex = 0;
+            this.lbWork.SelectedIndexChanged += new System.EventHandler(this.lbWork_SelectedIndexChanged);
             // 
             // lbWait
             // 

@@ -105,5 +105,19 @@ namespace SecondSyn
             }
             lbWork.Items.Add(tname);
         }
+
+        private void lbWork_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = lbWork.SelectedIndex;
+            if (index != -1 )
+            {
+                string str = lbWork.SelectedItem.ToString();
+                str = str.Substring(6);
+                int i = Convert.ToInt32(str);
+                Thread t = threads[i - 1];
+                lbWork.Items.RemoveAt(index);
+                s.Release();
+            }
+        }
     }
 }
